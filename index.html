@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - stereo pano demo</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="viewmode" content="projection=stereo">
+		<style>
+			html, body {
+				background-color: #000;
+				margin: 0px;
+				padding: 0px;
+				overflow: hidden;
+			}
+
+			#VrMode {
+				position: absolute;
+				top: 0;
+				left: 0;
+				margin: 10px;
+				background: black;
+				border: 0;
+				color: #fff;
+				padding: 10px;
+				font-size: 1rem;
+			}
+
+		</style>
+
+		<script>
+		WebVRConfig = {
+			// Forces availability of VR mode.
+			FORCE_ENABLE_VR: true, // Default: false.
+			// Complementary filter coefficient. 0 for accelerometer, 1 for gyro.
+			//K_FILTER: 0.98, // Default: 0.98.
+			// How far into the future to predict during fast motion.
+			//PREDICTION_TIME_S: 0, // Default: 0.050s.
+			// Flag to disable touch panner. In case you have your own touch controls
+			//TOUCH_PANNER_DISABLED: true, // Default: false.
+			// Enable yaw panning only, disabling roll and pitch. This can be useful
+			// for panoramas with nothing interesting above or below.
+			//YAW_ONLY: true, // Default: false.
+			// To disable keyboard and mouse controls. If you implement your own.
+			//MOUSE_KEYBOARD_CONTROLS_DISABLED: true // Default: false
+		}
+		</script>
+	</head>
+	<body>
+		<button id="VrMode">VR MODE</button>
+		<script src="js/three.min.js"></script>
+		<script src="js/webvr-polyfill.js"></script>
+		<script src="js/VRControls.js"></script>
+		<script src="js/VREffect.js"></script>
+		<script src="js/main.js"></script>
+
+	</body>
+</html>
