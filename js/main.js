@@ -20,7 +20,8 @@ function init() {
   vrControls = new THREE.VRControls( camera );
 
 
-  var textures = getTexturesFromAtlasFile( "images/sun_temple.png", 12 );
+  //var textures = getTexturesFromAtlasFile( "images/sun_temple.png", 12 );
+  var textures = getTexturesFromAtlasFile( "images/1.jpg", 12 );
 
 
   var materials = [];
