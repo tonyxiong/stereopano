@@ -19,7 +19,25 @@ function init() {
   effect = new THREE.VREffect( renderer );
   vrControls = new THREE.VRControls( camera );
 
+  var geometry = new THREE.SphereGeometry( 1, 100, 100 );
+	
+  var texture = new THREE.ImageUtils.loadTexture( "images/1.jpg" );
+  texture.minFilter = THREE.LinearFilter;
+  texture.flipY = false;
+  
+  var material = new THREE.MeshBasicMaterial( {
+        side: THREE.DoubleSide,
+        color: 0xFFFFFF, specular: 0xcccccc, shininess:50, ambient: 0xffffff,
+        map: texture
+	} );
 
+  sphere = new THREE.Mesh( geometry, material );
+  sphere.rotation.x += Math.PI;
+
+  scene.add(sphere);
+
+  
+  /*
   var textures = getTexturesFromAtlasFile( "images/sun_temple.png", 12 );
   //var textures = getTexturesFromAtlasFile( "images/1.jpg", 1 );
 
@@ -50,6 +68,7 @@ function init() {
   skyBoxR.applyMatrix( new THREE.Matrix4().makeScale( 1, 1, -1 ) );
   skyBoxR.layers.set( 2 );
   scene.add( skyBoxR );
+  */
 
   animate();
   onWindowResize();
