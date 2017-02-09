@@ -21,7 +21,7 @@ function init() {
 
 
   //var textures = getTexturesFromAtlasFile( "images/sun_temple.png", 12 );
-  var textures = getTexturesFromAtlasFile( "images/1.jpg", 6 );
+  var textures = getTexturesFromAtlasFile( "images/1.jpg", 1 );
 
 
   var materials = [];
