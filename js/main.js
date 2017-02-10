@@ -7,7 +7,8 @@ var vrMode = false;
 
 function init() {
 
-  renderer = new THREE.WebGLRenderer( { antialias: true } );
+  //renderer = new THREE.WebGLRenderer( { antialias: true } );
+  renderer = new THREE.WebGLRenderer();
   renderer.setPixelRatio( window.devicePixelRatio ? window.devicePixelRatio : 1 );
   document.body.appendChild( renderer.domElement );
 
