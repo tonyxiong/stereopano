@@ -36,6 +36,10 @@ function init() {
 
   scene.add(sphere);
 
+  sphereR = new THREE.Mesh( geometry, material );
+  sphereR.rotation.x += Math.PI;
+
+  scene.add(sphereR);
   
   /*
   var textures = getTexturesFromAtlasFile( "images/sun_temple.png", 12 );
