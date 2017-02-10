@@ -7,8 +7,7 @@ var vrMode = false;
 
 function init() {
 
-  //renderer = new THREE.WebGLRenderer( { antialias: true } );
-  renderer = new THREE.WebGLRenderer();
+  renderer = new THREE.WebGLRenderer( { antialias: true } );
   renderer.setPixelRatio( window.devicePixelRatio ? window.devicePixelRatio : 1 );
   document.body.appendChild( renderer.domElement );
 
@@ -20,6 +19,7 @@ function init() {
   effect = new THREE.VREffect( renderer );
   vrControls = new THREE.VRControls( camera );
 
+ /*
   var geometry = new THREE.SphereGeometry( 1, 100, 100 );
 	
   var texture = new THREE.ImageUtils.loadTexture( "images/1.jpg" );
@@ -41,8 +41,8 @@ function init() {
   sphereR.rotation.x += Math.PI;
 
   scene.add(sphereR);
+  */
   
-  /*
   var textures = getTexturesFromAtlasFile( "images/sun_temple.png", 12 );
   //var textures = getTexturesFromAtlasFile( "images/1.jpg", 1 );
 
@@ -73,7 +73,7 @@ function init() {
   skyBoxR.applyMatrix( new THREE.Matrix4().makeScale( 1, 1, -1 ) );
   skyBoxR.layers.set( 2 );
   scene.add( skyBoxR );
-  */
+  
 
   animate();
   onWindowResize();
